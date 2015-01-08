@@ -23,6 +23,7 @@ class Application{
 		$this->config=(require ( util::getFile('config.php','',true) ));
 		$this->define_constants();
 		$GLOBALS['phoffaControllers']=realpath(phoffaControllers);
+		define('baseurl',util::getBaseURL());
 	}
 
 	function fireApp(){		
@@ -35,8 +36,6 @@ class Application{
 
 	function getController(){	
 		$REQUEST_URI=$this->REQUEST_URI;
-		var_dump($REQUEST_URI);
-		var_dump($this->controller_list);
 	}
 
 	function define_constants(){

@@ -17,8 +17,9 @@ class Controller{
 		require(util::getFile($viewName,phoffaViews,true));
 	}
 
+
 	function __404(){
-		require(util::getFile('404.html','',true));
+		include(util::getFile('404.php','',true));
 	}
 	function index(){
 		echo 'welcome to phoffa';

@@ -64,5 +64,9 @@ class utility{
 	static function getAppRoot(){		
 		return dirname(dirname(dirname(__FILE__)));
 	}
+
+	static function getBaseURL(){
+		return '/'.basename(approot);
+	}
 }
 ?>
